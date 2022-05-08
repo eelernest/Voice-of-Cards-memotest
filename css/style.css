@@ -1,0 +1,93 @@
+@media screen and (min-width: 650px){
+    #logomobile{
+        display: none;
+    }
+    #logodesk{
+        display: block;
+    }
+}
+*{
+transition: all 1s;
+}
+body{
+    background-image: url("../img/cardsjpg/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.fila-1{
+    height:90vh;
+}
+.fila-2{
+    height:10vh;
+}
+.card{
+    background-color: black;
+    border: 2.5px solid white;
+    padding: 3px;
+    position: relative;
+    height: 19%;
+}
+.cards{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    position: relative;
+    animation: iniciar 2.8s;
+    cursor: pointer;
+}
+.face{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    backface-visibility: hidden;  
+}
+.oculta{
+    transform: rotateY(180deg);
+}
+.card-button{
+    padding: 0px;
+    height: 6vh;
+}
+.card-newGame{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    opacity: 1;
+    background-image: url("../img/cardsjpg/fondo2.jpg");
+    background-size: cover;
+    opacity: 0.6;
+}
+.card-newGame:hover {
+    transition: ease-in-out 0.5s;
+    opacity: 1;
+}
+.newGame{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.card-newGame .card-title{
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+@keyframes iniciar{
+    20%,90%{
+        transform: rotateY(180deg);
+    }
+    0%,100%{
+        transform:rotateY(0deg);
+    }
+}
+@media screen and (max-width:600px){
+    .card-newGame .card-title{
+        text-align: center;
+        color: white;
+        font-size: 0.8rem;
+    }
+}
