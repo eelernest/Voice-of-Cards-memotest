@@ -46,18 +46,28 @@
     </div>
     <!--Memotest -->
      <div class="container">
+       <!--Music -->
+       <audio autoplay loop id="audio"  src="music/VoCPulsating Power.mp3" ></audio>
       
         <div class="row fila-1 tablero d-flex justify-content-center" id="tablero">
           
 
         </div>
-      <!--New Game button -->
+      <!--New Game button and Score -->
         <div class="row fila-2 justify-content-center">
             <div class="card card-button col-3 mt-3" id="button" onclick="generarTablero()">
                 <div class="card-newGame d-flex justify-content-center align-items-center">
                     <div class="card-title"><strong>New Game</strong></div>
                 </div>
             </div>
+            <!--ico Sound -->
+            <div id="play" class="sound-label d-flex justify-content-center align-items-center offset-1 col-2 mt-2">
+              <div id="soundImg" class="sound">
+                <img  src="img/loader/musica.png" alt="">
+              </div>
+            </div>
+            <!--ico Sound-End -->
+          
         </div>
         
     </div>
@@ -77,5 +87,6 @@
   </script>
   <!--Logic JS -->
   <script src="js/logic.js"></script>
+  <script src="js/music.js"></script>
   
 </html>
