@@ -1,6 +1,7 @@
 let cardsAmount = 24;
 let iconos = [];
 let selectors = [];
+let score;
 
 generarTablero();
 
@@ -22,7 +23,8 @@ function cargarIconos() {
 };
 
 function generarTablero() {
-        cargarIconos();
+    score = 0;
+    cargarIconos();
     
     let tablero = document.getElementById("tablero");
 
@@ -71,6 +73,7 @@ function desSelectors(selectors){
                 let c2 = document.getElementById("cards" + selectors[1]);
                 c1.style.transform = "rotateY(0deg)";
                 c2.style.transform = "rotateY(0deg)";
+                score++;
             }
             else {
                 back1.style.opacity = 0.2;
@@ -84,6 +87,7 @@ function desSelectors(selectors){
                     confirmButtonColor: "#3d3d3d",
                     color:"white",
                     background:"none",
+                    footer:"Errors: " + score
                 })
             }
 
