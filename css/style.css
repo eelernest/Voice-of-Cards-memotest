@@ -23,7 +23,7 @@ body{
 }
 .card{
     background-color: black;
-    border: 2.5px solid white;
+    border: 1px solid white;
     padding: 3px;
     position: relative;
     height: 19%;
@@ -75,7 +75,24 @@ body{
     color: white;
     font-size: 1.5rem;
 }
-
+.sound-label{
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-image: url("../img/cardsjpg/fondo2.jpg");
+    background-size: cover;
+}
+.sound img{
+    width: 90%;
+    height: 90%;
+    filter: invert(60%);
+    object-fit: cover;
+}
+.sound-label:hover img {
+    filter: invert(100%);
+}
 @keyframes iniciar{
     20%,90%{
         transform: rotateY(180deg);
@@ -86,8 +103,17 @@ body{
 }
 @media screen and (max-width:600px){
     .card-newGame .card-title{
-        text-align: center;
-        color: white;
         font-size: 0.8rem;
+    }
+    .sound-label{
+        padding: 3%;
+        width: 11%;
+        height: 6vh;
+    }
+    .sound img{
+        width: 90%;
+        height: 90%;
+        filter: invert(60%);
+        object-fit: cover;
     }
 }
